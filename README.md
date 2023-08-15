@@ -41,14 +41,14 @@ python3 -m venv env
 
 ```
 
-Step 3
+Step 3:
 
 ```bash
 # Install the required packages. You can install it using requirements.txt:
 pip install -r requirements.txt
 ```
 
-Step 4
+Step 4:
 
 ```bash
 # You can now run the script using Python:

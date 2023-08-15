@@ -1,0 +1,250 @@
+@prefix : <http://api.stardog.com/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+
+@base  <http://example.org/> .
+
+
+<property/temperature> a sosa:ObservableProperty;
+   rdfs:label "Temperature"@en ;
+   rdfs:comment"The internal temperature of the sensor or the temperature of the environment in which the sensor is placed."@en .
+
+<property/direction> a sosa:ObservableProperty;
+   rdfs:label "Direction"@en ;
+   rdfs:comment "The sensor's compass bearing or the direction in which a moving sensor is headed."@en .
+
+<property/speed> a sosa:ObservableProperty;
+   rdfs:label "Speed"@en ;
+   rdfs:comment "The speed at which the sensor platform is moving."@en .
+
+<property/PDOP> a sosa:ObservableProperty;
+   rdfs:label "PDOP"@en ;
+   rdfs:comment "Position Dilution of Precision, a term used in GPS technology to describe the effect of satellite geometry on positional measurement precision."@en .
+
+sosa:resultTime a sosa:ObservableProperty;
+   rdfs:label "Result Time"@en ;
+   rdfs:comment "This property links an instance of sosa:Observation or sosa:Actuation to the time at which the observation result was generated or the actuation was completed, respectively. The time is represented according to the datetime standard in the XML schema, which follows the ISO 8601 standard."@en .
+
+geo:alt a sosa:ObservableProperty;
+   rdfs:label "Altitude"@en ;
+   rdfs:comment "The sensor's height above a fixed reference point, usually sea level."@en .
+
+geo:lat a sosa:ObservableProperty;
+   rdfs:label "Latitude"@en ;
+   rdfs:comment "The sensor's north-south position on the Earth's surface."@en .
+
+geo:long a sosa:ObservableProperty;
+   rdfs:label "Longitude"@en ;
+   rdfs:comment "The sensor's east-west position on the Earth's surface."@en .
+
+<property/HDOP>  a sosa:ObservableProperty;
+   rdfs:label "Horizontal Dilution of Precision"@en;
+   rdfs:comment "Short for Horizontal Dilution of Precision, a measure used in GPS and GNSS systems to describe the quality of positional data. Lower values represent better data." .
+
+<property/type>  a sosa:ObservableProperty; 
+   rdfs:label "Type"@en ;
+   rdfs:comment "The type of sensor that is generating the data."@en .
+
+<property/extTemp> a sosa:ObservableProperty; 
+   rdfs:label "External Temperature"@en;
+   rdfs:comment "The temperature of the environment outside of the sensor."@en .
+
+<property/count> a sosa:ObservableProperty;
+   rdfs:label "Count"@en ; 
+   rdfs:comment "A way of keeping track of how many times a certain event has occurred or how many observations have been recorded."@en .
+
+<property/cov> a sosa:ObservableProperty;
+   rdfs:label "Covariance"@en ;
+   rdfs:comment "Covariance, a measure of how much two random variables vary together."@en .
+
+<property/activity> a sosa:ObservableProperty;
+   rdfs:label "Activity"@en ;
+   rdfs:comment "The status or operation the sensor is currently engaging in."@en .
+
+<property/distance> a sosa:ObservableProperty;
+   rdfs:label "Distance"@en ;
+   rdfs:comment "The distance the sensor has traveled or the distance to a particular object or event that the sensor is measuring."@en .
+
+
+<elephant/Aqeela> a sosa:Sensor ;
+   rdfs:label "Elephant GPS Collar"@en ;
+   rdfs:comment "A GPS tracking collar specifically designed for monitoring elephant movements and behavior.";
+   sosa:observes  <property/temperature>,
+                  <property/direction>,
+                  <property/speed>,
+                  <property/PDOP>,
+                  sosa:resultTime,
+                  geo:alt,
+                  geo:lat,
+                  geo:long;
+                  sosa:hasFeatureOfInterest <ontologies/featureOfInterest/forest#Elephant> .
+
+
+<elephant/Putut> a sosa:Sensor ;
+   rdfs:label "Elephant GPS Collar"@en ;
+   rdfs:comment "A GPS tracking collar specifically designed for monitoring elephant movements and behavior.";
+   sosa:observes  <property/temperature>, <property/direction>, <property/speed>, <property/PDOP>, sosa:resultTime, geo:alt, geo:lat, geo:long;
+   sosa:hasFeatureOfInterest <ontologies/featureOfInterest/forest#Elephant> .
+
+<elephant/Liun> a sosa:Sensor ;
+   rdfs:label "Elephant GPS Collar"@en ;
+   rdfs:comment "A GPS tracking collar specifically designed for monitoring elephant movements and behavior.";
+   sosa:observes  <property/temperature>, <property/direction>, <property/speed>, <property/PDOP>, sosa:resultTime, geo:alt, geo:lat, geo:long;
+   sosa:hasFeatureOfInterest <ontologies/featureOfInterest/forest#Elephant> .
+
+
+<elephant/Abaw> a sosa:Sensor ;
+   rdfs:label "Elephant GPS Collar"@en ;
+   rdfs:comment "A GPS tracking collar specifically designed for monitoring elephant movements and behavior.";
+   sosa:observes  <property/temperature>, <property/direction>, <property/speed>, <property/PDOP>, sosa:resultTime, geo:alt, geo:lat, geo:long;
+   sosa:hasFeatureOfInterest <ontologies/featureOfInterest/forest#Elephant> .
+
+
+<elephant/Bikang1> a sosa:Sensor ;
+   rdfs:label "Elephant GPS Collar"@en ;
+   rdfs:comment "A GPS tracking collar specifically designed for monitoring elephant movements and behavior.";
+   sosa:observes  <property/temperature>, <property/direction>, <property/speed>, <property/PDOP>, sosa:resultTime, geo:alt, geo:lat, geo:long;
+   sosa:hasFeatureOfInterest <ontologies/featureOfInterest/forest#Elephant> .
+
+
+<elephant/Bikang2> a sosa:Sensor ;
+   rdfs:label "Elephant GPS Collar"@en ;
+   rdfs:comment "A GPS tracking collar specifically designed for monitoring elephant movements and behavior.";
+   sosa:observes  <property/temperature>, <property/direction>, <property/speed>, <property/PDOP>, sosa:resultTime, geo:alt, geo:lat, geo:long;
+   sosa:hasFeatureOfInterest <ontologies/featureOfInterest/forest#Elephant> .
+
+
+<elephant/Dara> a sosa:Sensor ;
+   rdfs:label "Elephant GPS Collar"@en ;
+   rdfs:comment "A GPS tracking collar specifically designed for monitoring elephant movements and behavior.";
+   sosa:observes  <property/activity>,
+                  <property/temperature>,
+                  <property/direction>,
+                  <property/speed>,
+                  <property/extTemp>,
+                  <property/HDOP>,
+                  <property/cov>,
+                  <property/count>,
+                  <property/distance>,
+                  sosa:resultTime,
+                  geo:alt,
+                  geo:lat,
+                  geo:long;
+                  sosa:hasFeatureOfInterest <ontologies/featureOfInterest/forest#Elephant> .
+
+
+<elephant/Guli> a sosa:Sensor ;
+   rdfs:label "Elephant GPS Collar"@en ;
+   rdfs:comment "A GPS tracking collar specifically designed for monitoring elephant movements and behavior.";
+   sosa:observes  <property/temperature>, <property/direction>, <property/speed>, <property/PDOP>, sosa:resultTime, geo:alt, geo:lat, geo:long;
+   sosa:hasFeatureOfInterest <ontologies/featureOfInterest/forest#Elephant> .
+
+
+<elephant/Ita> a sosa:Sensor ;
+   rdfs:label "Elephant GPS Collar"@en ;
+   rdfs:comment "A GPS tracking collar specifically designed for monitoring elephant movements and behavior.";
+   sosa:observes  <property/temperature>, <property/direction>, <property/speed>, <property/PDOP>, sosa:resultTime, geo:alt, geo:lat, geo:long;
+   sosa:hasFeatureOfInterest <ontologies/featureOfInterest/forest#Elephant> .
+
+
+<elephant/Jasmin> a sosa:Sensor ;
+   rdfs:label "Elephant GPS Collar"@en ;
+   rdfs:comment "A GPS tracking collar specifically designed for monitoring elephant movements and behavior.";
+   sosa:observes  <property/temperature>, <property/direction>, <property/speed>, <property/PDOP>, sosa:resultTime, geo:alt, geo:lat, geo:long;
+   sosa:hasFeatureOfInterest <ontologies/featureOfInterest/forest#Elephant> .
+
+
+<elephant/Jasper> a sosa:Sensor ;
+   rdfs:label "Elephant GPS Collar"@en ;
+   rdfs:comment "A GPS tracking collar specifically designed for monitoring elephant movements and behavior.";
+   sosa:observes  <property/temperature>, <property/direction>, <property/speed>, <property/PDOP>, sosa:resultTime, geo:alt, geo:lat, geo:long;
+   sosa:hasFeatureOfInterest <ontologies/featureOfInterest/forest#Elephant> .
+
+
+<elephant/Kasih> a sosa:Sensor ;
+   rdfs:label "Elephant GPS Collar"@en ;
+   rdfs:comment "A GPS tracking collar specifically designed for monitoring elephant movements and behavior.";
+   sosa:observes  <property/temperature>, <property/direction>, <property/speed>, <property/PDOP>, sosa:resultTime, geo:alt, geo:lat, geo:long;
+   sosa:hasFeatureOfInterest <ontologies/featureOfInterest/forest#Elephant> .
+
+
+<elephant/Kuma> a sosa:Sensor ;
+   rdfs:label "Elephant GPS Collar"@en ;
+   rdfs:comment "A GPS tracking collar specifically designed for monitoring elephant movements and behavior.";
+   sosa:observes  <property/temperature>, <property/direction>, <property/speed>, <property/PDOP>, sosa:resultTime, geo:alt, geo:lat, geo:long;
+   sosa:hasFeatureOfInterest <ontologies/featureOfInterest/forest#Elephant> .
+
+
+<elephant/Maliau> a sosa:Sensor ;
+   rdfs:label "Elephant GPS Collar"@en ;
+   rdfs:comment "A GPS tracking collar specifically designed for monitoring elephant movements and behavior.";
+   sosa:observes  <property/temperature>, <property/direction>, <property/speed>, <property/PDOP>, sosa:resultTime, geo:alt, geo:lat, geo:long;
+   sosa:hasFeatureOfInterest <ontologies/featureOfInterest/forest#Elephant> .
+
+
+<elephant/Merotai> a sosa:Sensor ;
+   rdfs:label "Elephant GPS Collar"@en ;
+   rdfs:comment "A GPS tracking collar specifically designed for monitoring elephant movements and behavior.";
+   sosa:observes  <property/temperature>, <property/direction>, <property/speed>, <property/PDOP>, sosa:resultTime, geo:alt, geo:lat, geo:long;
+   sosa:hasFeatureOfInterest <ontologies/featureOfInterest/forest#Elephant> .
+
+
+<elephant/Puteri> a sosa:Sensor ;
+   rdfs:label "Elephant GPS Collar"@en ;
+   rdfs:comment "A GPS tracking collar specifically designed for monitoring elephant movements and behavior.";
+   sosa:observes  <property/temperature>, <property/direction>, <property/speed>, <property/PDOP>, sosa:resultTime, geo:alt, geo:lat, geo:long;
+   sosa:hasFeatureOfInterest <ontologies/featureOfInterest/forest#Elephant> .
+
+
+<elephant/Sandi> a sosa:Sensor ;
+   rdfs:label "Elephant GPS Collar"@en ;
+   rdfs:comment "A GPS tracking collar specifically designed for monitoring elephant movements and behavior.";
+   sosa:observes  <property/temperature>, <property/direction>, <property/speed>, <property/PDOP>, sosa:resultTime, geo:alt, geo:lat, geo:long;
+   sosa:hasFeatureOfInterest <ontologies/featureOfInterest/forest#Elephant> .
+
+
+<elephant/Sejati> a sosa:Sensor ;
+   rdfs:label "Elephant GPS Collar"@en ;
+   rdfs:comment "A GPS tracking collar specifically designed for monitoring elephant movements and behavior.";
+   sosa:observes  <property/temperature>, <property/direction>, <property/speed>, <property/PDOP>, sosa:resultTime, geo:alt, geo:lat, geo:long;
+   sosa:hasFeatureOfInterest <ontologies/featureOfInterest/forest#Elephant> .
+
+
+<elephant/Tulid> a sosa:Sensor ;
+   rdfs:label "Elephant GPS Collar"@en ;
+   rdfs:comment "A GPS tracking collar specifically designed for monitoring elephant movements and behavior.";
+   sosa:observes  <property/temperature>, <property/direction>, <property/speed>, <property/PDOP>, sosa:resultTime, geo:alt, geo:lat, geo:long;
+   sosa:hasFeatureOfInterest <ontologies/featureOfInterest/forest#Elephant> .
+
+
+<elephant/Seri> a sosa:Sensor ;
+   rdfs:label "Elephant GPS Collar"@en ;
+   rdfs:comment "A GPS tracking collar specifically designed for monitoring elephant movements and behavior.";
+   sosa:observes  <property/temperature>, <property/direction>, <property/speed>, <property/PDOP>, sosa:resultTime, geo:alt, geo:lat, geo:long;
+   sosa:hasFeatureOfInterest <ontologies/featureOfInterest/forest#Elephant> .
+
+
+<elephant/Tunglap> a sosa:Sensor ;
+   rdfs:label "Elephant GPS Collar"@en ;
+   rdfs:comment "A GPS tracking collar specifically designed for monitoring elephant movements and behavior.";
+   sosa:observes  <property/temperature>, <property/direction>, <property/speed>, <property/PDOP>, sosa:resultTime, geo:alt, geo:lat, geo:long;
+   sosa:hasFeatureOfInterest <ontologies/featureOfInterest/forest#Elephant> .
+
+
+<elephant/Umas2> a sosa:Sensor ;
+   rdfs:label "Elephant GPS Collar"@en ;
+   rdfs:comment "A GPS tracking collar specifically designed for monitoring elephant movements and behavior.";
+   sosa:observes  <property/temperature>, <property/direction>, <property/speed>, <property/PDOP>, sosa:resultTime, geo:alt, geo:lat, geo:long;
+   sosa:hasFeatureOfInterest <ontologies/featureOfInterest/forest#Elephant> .
+
+
+# JULING
+<python/Juling> a sosa:Sensor ;
+   rdfs:label "Python VHF Chip"@en ;
+   rdfs:comment "A very high frequency (VHF) chip specifically designed for tracking python movements.";
+   sosa:observes  <property/speed>, <property/HDOP>, <property/type>, sosa:resultTime, geo:lat, geo:long;
+   sosa:hasFeatureOfInterest <ontologies/featureOfInterest/forest#Python> .

@@ -54,7 +54,8 @@ Faker.seed(0)
 
 # File Naming
 dateName = datetime.now().strftime("%Y_%m_%d-%H%M%S")
-outF = open(f"dataset/Forest_synthetic_dataset_{dateName}.ttl", "w")
+fileName = f"dataset/Forest_synthetic_dataset_{dateName}.ttl"
+outF = open(fileName, "w")
 # 
 
 
@@ -159,7 +160,7 @@ for sensor in helper.sensorsData:
             elif params["type"] == "GPS":
                 params["HDOP"] = '"{}"^^xsd:float'.format(random.choice(sensor['HDOP']))
             else:
-                params["HDOP"] = 'NaN'
+                params["HDOP"] = '--NaN--' #flag to remove this line
         
         if 'cov' in placeholders: 
             params["cov"] = random.randint(0,5)
@@ -173,8 +174,19 @@ for sensor in helper.sensorsData:
         
 
 
-        # record = record.format(**params)
-        outF.write(record.format(**params))
+        input_record = record.format(**params)
+
+        # ============= Remove row if contains --NaN-- flag =============
+        lines = input_record.splitlines()
+        lines = [line for line in lines if "--NaN--" not in line]
+        input_record = '\n'.join(lines)
+        # ===============================================================
+        
+        outF.write(input_record) #Write to the file
+        # End of inner loop
+    print("data for entity "+str(sensor["name"])+" completed..")
+    # End of outer/sensor loop
+print("\nDone. Your created ttl dataset is: "+fileName)
 
 outF.close()
 

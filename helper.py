@@ -47,7 +47,7 @@ recordsTemplates = [
     <property/temperature> "{temperature}"^^xsd:float ;
     <property/direction> "{direction}"^^xsd:float ;
     <property/speed> "{speed}"^^xsd:float ;
-    <property/PDOP> "{PDOP}"^^xsd:integer;;
+    <property/PDOP> "{PDOP}"^^xsd:integer ;
     geo:alt "{alt}"^^xsd:float ;
     geo:lat "{lat}"^^xsd:float ;
     geo:long "{long}"^^xsd:float .""",
@@ -71,10 +71,10 @@ recordsTemplates = [
     <property/extTemp> "{extTemp}"^^xsd:float ;
     <property/direction> "{direction}"^^xsd:float ;
     <property/speed> "{speed}"^^xsd:float ;
-    <property/PDOP> "{HDOP}"^^xsd:integer;
-    <property/count> "{count}"^^xsd:integer;
-    <property/cov> "{cov}"^^xsd:integer;
-    <property/distance> "{distance}"^^xsd:float;
+    <property/PDOP> "{HDOP}"^^xsd:integer ;
+    <property/count> "{count}"^^xsd:integer ;
+    <property/cov> "{cov}"^^xsd:integer ;
+    <property/distance> "{distance}"^^xsd:float ;
     geo:alt "{alt}"^^xsd:float ;
     geo:lat "{lat}"^^xsd:float ;
     geo:long "{long}"^^xsd:float .""",

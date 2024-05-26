@@ -80,6 +80,9 @@ Remember, these are just basics to get started. RDF and SPARQL have deep capabil
 - https://www.w3.org/2015/spatial/wiki/SOSA_Ontology
 - https://github.com/w3c/sdw/tree/gh-pages/ssn/rdf
 
+## Main Project
+For more details about the Forest Query Builder project, please visit the main repository:
+- [ForestQB Main Repository](https://github.com/i3omar/ForestQB)
 
 ## Contributing
 

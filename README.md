@@ -3,16 +3,20 @@
 **ForestRDF**, a synthetic dataset tailored for tracking animals in forests. Semantically-structured wildlife movement data, paving the way for testing RDF and Linked-Data extaction techniques. 
 
 ## Table of Contents
-
+- [Dataset](#dataset)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 
 
+## Dataset
+
+To download the dataset in Turtle (TTL) format, please click on the following link:
+[Download Dataset](https://github.com/i3omar/ForestRDF/blob/main/dataset/Forest_synthetic_dataset_2023_08_18-213310.ttl)
 
 ## Installation
 
-You can eaither ***use the generated dataset*** from the dataset folder, or ***regenerate*** your own data using our script.
+You can eaither ***use the generated dataset*** from the [dataset folder](https://github.com/i3omar/ForestRDF/tree/main/dataset), or ***regenerate*** your own data using our script.
 
 To generate your own data:
 
